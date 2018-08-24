@@ -68,7 +68,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: "/webpack_configure/dist/",
+        publicPath: "/admin-v1-fe/dist/",
         filename: 'js/app.js'
     },
     plugins: [

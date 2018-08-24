@@ -10,7 +10,7 @@ import './index.scss'
 ReactDOM.render(
     <div>
         <i className="fa fa-camera-retro"></i>
-        <h1>Hello World!!!!</h1>
+        <h1>测试git提交</h1>
     </div>,
     document.getElementById('app')
 )

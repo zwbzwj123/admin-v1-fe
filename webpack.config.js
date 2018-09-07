@@ -8,6 +8,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     // context: __dirname + '/src',
     entry: "./src/app.js",
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        publicPath: "/admin-v1-fe/dist/",
+        filename: 'js/app.js'
+    },
+    resolve: {
+        //可以保存部分路径开头，以后就可以简写
+        alias: {
+            page: path.resolve(__dirname, './src/page'),
+            component: path.resolve(__dirname, './src/component')
+        }
+    },
     mode: "development",
     module: {
         rules: [
@@ -66,11 +78,6 @@ module.exports = {
             }
         ]
     },
-    output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: "/admin-v1-fe/dist/",
-        filename: 'js/app.js'
-    },
     plugins: [
         //处理html文件
         new HtmlWebpackPlugin({
@@ -93,6 +100,9 @@ module.exports = {
         }
     },
     devServer:{
-        port: 8086
+        port: 8086,
+        historyApiFallback: {
+            index: '/dist/index.html'
+        }
     }
 };

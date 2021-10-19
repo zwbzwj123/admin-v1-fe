@@ -3,7 +3,7 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="JSX" />
   </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/src/component/layout/pc.sass" />
+  <component name="WebPackConfiguration">
+    <option name="mode" value="DISABLED" />
   </component>
 </project>
